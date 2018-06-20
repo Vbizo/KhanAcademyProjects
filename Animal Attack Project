@@ -1,0 +1,26 @@
+var faceSize =202;
+var ears = 1/2*faceSize;
+var eyes = 1/4*faceSize;
+var mouth = 1/2*faceSize;
+
+draw = function() {
+      background(161, 253, 255);
+    // face
+    fill(255, 255, 255);
+    ellipse(mouseX, mouseY, faceSize, faceSize);
+    
+    //eyes
+    fill(0, 0, 0);
+    ellipse(mouseX+45,mouseY-15,eyes,eyes);
+    ellipse(mouseX-50,mouseY-15,eyes,eyes);
+    
+    //ears
+    fill(255, 255, 255);
+    ellipse(mouseX+70,mouseY-105,ears,ears);
+    ellipse(mouseX-70,mouseY-105,ears,ears);
+    
+    //mouth
+    fill(255, 0, 0);
+    arc(mouseX,mouseY+25,mouth,mouth,0,180);
+    
+};
